@@ -1,18 +1,20 @@
 package entity;
-
+//í´ë” êµ¬ë¶„ì„ ìœ„í•´ ìˆ˜ì •ë˜ì—ˆìŠµë‹ˆë‹¤. ìˆ˜ì •ì¼ì -  2021-12-19 03:22 
 public class ChildBoardInfo {
 	private int category;
-	private int kind;//°Ô½ÃÆÇÀÌ Ä«µå Çü½ÄÀÎÁö, ÀÏ¹İ °Ô½ÃÆÇ Çü½ÄÀÎÁö
+	private int kind;// ê²Œì‹œíŒì´ ì¹´ë“œ í˜•ì‹ì¸ì§€, ì¼ë°˜ ê²Œì‹œíŒ í˜•ì‹ì¸ì§€
 	private String name;
 	private int parent;
-	private boolean admin;//ÀÌÈÄ °ü¸®ÀÚ - ÀÏ¹İ »ç¿ëÀÚ °Ô½ÃÆÇÀÌ ÇÕÃÄÁú °ÍÀ» ´ëºñ
-	private boolean cmtPermit;//´ñ±Û Çã¿ë
-	private boolean readPermit;//È¸¿ø¸¸ ÀĞ±â Çã¿ë
-	
-	public ChildBoardInfo() {}
+	private boolean admin;// ì´í›„ ê´€ë¦¬ì - ì¼ë°˜ ì‚¬ìš©ì ê²Œì‹œíŒì´ í•©ì³ì§ˆ ê²ƒì„ ëŒ€ë¹„
+	private boolean cmtPermit;// ëŒ“ê¸€ í—ˆìš©
+	private boolean readPermit;// íšŒì›ë§Œ ì½ê¸° í—ˆìš©
+	private String folderName;
+
+	public ChildBoardInfo() {
+	}
 	
 	public ChildBoardInfo(int category, int kind, String name, int parent, boolean admin, boolean cmtPermit,
-			boolean readPermit) {
+			boolean readPermit, String folderName) {
 		this.category = category;
 		this.kind = kind;
 		this.name = name;
@@ -20,49 +22,71 @@ public class ChildBoardInfo {
 		this.admin = admin;
 		this.cmtPermit = cmtPermit;
 		this.readPermit = readPermit;
+		this.folderName = folderName;
 	}
-	
+
 	public int getCategory() {
 		return category;
 	}
+
 	public void setCategory(int category) {
 		this.category = category;
 	}
+
 	public int getKind() {
 		return kind;
 	}
+
 	public void setKind(int kind) {
 		this.kind = kind;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public int getParent() {
 		return parent;
 	}
+
 	public void setParent(int parent) {
 		this.parent = parent;
 	}
+
 	public boolean getAdmin() {
 		return admin;
 	}
+
 	public void setAdmin(boolean admin) {
 		this.admin = admin;
 	}
+
 	public boolean getCmtPermit() {
 		return cmtPermit;
 	}
+
 	public void setCmtPermit(boolean cmtPermit) {
 		this.cmtPermit = cmtPermit;
 	}
+
 	public boolean getReadPermit() {
 		return readPermit;
 	}
+
 	public void setReadPermit(boolean readPermit) {
 		this.readPermit = readPermit;
+	}
+
+	public String getFolderName() {
+		return folderName;
+	}
+
+	public void setFolderName(String folderName) {
+		this.folderName = folderName;
 	}
 
 	@Override
